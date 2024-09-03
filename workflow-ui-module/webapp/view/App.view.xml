@@ -1,0 +1,37 @@
+<mvc:View controllerName="com.sumoleave.workflowuimodule.controller.App"
+    xmlns:html="http://www.w3.org/1999/xhtml"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m" xmlns:l="sap.ui.layout"
+   xmlns:f="sap.ui.layout.form"
+   xmlns:core="sap.ui.core">
+    <App id="app">
+
+     <Page id="scroll" title="Manager Approval"> 
+        <content>
+            <VBox alignContent="Center" justifyContent="Center" width="100%" height="100%">
+                <f:SimpleForm id="f2" editable="true" layout="ResponsiveGridLayout" labelSpanXL="2" labelSpanL="2" labelSpanM="2" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="1" emptySpanL="1" emptySpanM="1" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" >
+                    <f:content>
+                        <Title text="Leave Request of Employee" class="TitleCenter" />
+                        
+                        <Label text="Employee Name" />
+                        <Input id="m_emp_name"  value="{context>/EmployeeName}" editable="false" />
+                        <Label text="Leave Type" />
+                        <Input id="m_leave_type"  value="{context>/LeaveType}" editable="false" />
+                        <Label text="From Date" />
+                        <DatePicker id="fromDateId" displayFormat="dd-MMM-yyyy"  valueFormat="yyyy-MM-ddT00:00:00" value="{context>/StartDate}" editable="false" />
+                        <Label text="To Date" />
+                        <DatePicker id="toDateId" displayFormat="dd-MMM-yyyy"   valueFormat="yyyy-MM-ddT00:00:00" value="{context>/EndDate}" editable="false" />
+                        <Label text="Reason" />
+                        <Input id="reasonId" placeholder="Enter reason for leave" value="{context>/Reason}" editable="false" />
+                        <Label text="Manager Comment" />
+                        <TextArea id="m_commit" editable="true" placeholder="Write Your Feedback" growing="true" growingMaxLines="7" width="100%" value="{context>/comment}"/>
+                    </f:content>
+                </f:SimpleForm>
+            </VBox>
+        </content>
+    </Page>
+
+
+
+    </App>
+</mvc:View>
